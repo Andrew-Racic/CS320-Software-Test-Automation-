@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.grandstand.services.ContactServiceTest" time="0.028" tests="20" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\andre\eclipse-workspace\MobileAppServices\target\test-classes;C:\Users\andre\eclipse-workspace\MobileAppServices\target\classes;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\andre\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\andre\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\andre\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\andre\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="America/Indianapolis"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11\bin"/>
+    <property name="sun.java.command" value="C:\Users\andre\AppData\Local\Temp\surefire7505810462398872800\surefirebooter13196258418144407255.jar C:\Users\andre\AppData\Local\Temp\surefire7505810462398872800 2025-02-15T14-35-40_017-jvmRun1 surefire12270248342706772108tmp surefire_016276357476002355419tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\andre\eclipse-workspace\MobileAppServices\target\test-classes;C:\Users\andre\eclipse-workspace\MobileAppServices\target\classes;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\andre\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\andre\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\andre\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\andre\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\andre\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\andre"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11"/>
+    <property name="file.separator" value="\"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="C:\Users\andre\eclipse-workspace\MobileAppServices"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\andre\AppData\Local\Temp\surefire7505810462398872800\surefirebooter13196258418144407255.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.26+7-LTS-187"/>
+    <property name="user.name" value="andre"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\andre\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\andre\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.26"/>
+    <property name="user.dir" value="C:\Users\andre\eclipse-workspace\MobileAppServices"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/andre/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529/jre/bin/server;C:/Users/andre/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-23\\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Maven\apache-maven-3.9.9\bin\bin;C:\Users\andre\AppData\Local\Programs\Python\Python312\Scripts\;C:\Maven\apache-maven-3.9.9\bin;C:\Users\andre\AppData\Local\Programs\Python\Python312\;C:\Users\andre\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\andre\AppData\Local\Programs\Python\Python313\;C:\Users\andre\AppData\Local\Microsoft\WindowsApps;C:\Users\andre\.dotnet\tools;C:\Users\andre\New folder\Microsoft VS Code\bin;C:\Users\andre\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\andre\AppData\Local\Programs\Microsoft VS Code Insiders\bin;;D:\java-2024-12\eclipse;;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.26+7-LTS-187"/>
+    <property name="java.specification.maintenance.version" value="3"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testGetContactNonExistent" classname="com.grandstand.services.ContactServiceTest" time="0.003"/>
+  <testcase name="testDeleteContactNullId" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testUpdatePhoneInvalid" classname="com.grandstand.services.ContactServiceTest" time="0.002"/>
+  <testcase name="testUpdatePhoneSuccess" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+  <testcase name="testUpdateAddressInvalid" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+  <testcase name="testGetContactSuccess" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+  <testcase name="testDeleteContactSuccess" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testUpdateFirstNameInvalid" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testUpdateAddressSuccess" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+  <testcase name="testUpdateAddressNonExistentContact" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testUpdateFirstNameSuccess" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testUpdateLastNameNonExistentContact" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testUpdateFirstNameNonExistentContact" classname="com.grandstand.services.ContactServiceTest" time="0.002"/>
+  <testcase name="testAddContactDuplicateId" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testUpdateLastNameInvalid" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+  <testcase name="testUpdatePhoneNonExistentContact" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+  <testcase name="testUpdateLastNameSuccess" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testDeleteContactNonExistent" classname="com.grandstand.services.ContactServiceTest" time="0.001"/>
+  <testcase name="testAddNullContact" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+  <testcase name="testAddContactSuccess" classname="com.grandstand.services.ContactServiceTest" time="0"/>
+</testsuite>

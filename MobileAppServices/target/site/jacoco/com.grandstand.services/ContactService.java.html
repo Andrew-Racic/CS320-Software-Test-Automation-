@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ContactService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MobileAppServices</a> &gt; <a href="index.source.html" class="el_package">com.grandstand.services</a> &gt; <span class="el_source">ContactService.java</span></div><h1>ContactService.java</h1><pre class="source lang-java linenums">package com.grandstand.services;
+
+import java.util.HashMap;
+import java.util.Map;
+
+<span class="fc" id="L6">public class ContactService {</span>
+
+<span class="fc" id="L8">    private final Map&lt;String, Contact&gt; contacts = new HashMap&lt;&gt;();</span>
+
+    // Add a new contact
+    public void addContact(Contact contact) {
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if (contact == null) {</span>
+<span class="fc" id="L13">            throw new IllegalArgumentException(&quot;Contact cannot be null.&quot;);</span>
+        }
+<span class="fc" id="L15">        String contactId = contact.getContactId();</span>
+<span class="pc bpc" id="L16" title="2 of 4 branches missed.">        if (contactId == null || contactId.length() == 0) {</span>
+<span class="nc" id="L17">            throw new IllegalArgumentException(&quot;Contact ID cannot be null or empty.&quot;);</span>
+        }
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (contacts.containsKey(contactId)) {</span>
+<span class="fc" id="L20">            throw new IllegalArgumentException(&quot;Contact ID already exists.&quot;);</span>
+        }
+<span class="fc" id="L22">        contacts.put(contactId, contact);</span>
+<span class="fc" id="L23">    }</span>
+
+    // Delete a contact by contactId
+    public void deleteContact(String contactId) {
+<span class="pc bpc" id="L27" title="1 of 4 branches missed.">        if (contactId == null || contactId.length() == 0) {</span>
+<span class="fc" id="L28">            throw new IllegalArgumentException(&quot;Contact ID cannot be null or empty.&quot;);</span>
+        }
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (contacts.remove(contactId) == null) {</span>
+<span class="fc" id="L31">            throw new IllegalArgumentException(&quot;Contact ID not found.&quot;);</span>
+        }
+<span class="fc" id="L33">    }</span>
+
+    // Update contact's first name
+    public void updateFirstName(String contactId, String firstName) {
+<span class="fc" id="L37">        Contact contact = getContact(contactId);</span>
+<span class="fc" id="L38">        contact.setFirstName(firstName);</span>
+<span class="fc" id="L39">    }</span>
+
+    // Update contact's last name
+    public void updateLastName(String contactId, String lastName) {
+<span class="fc" id="L43">        Contact contact = getContact(contactId);</span>
+<span class="fc" id="L44">        contact.setLastName(lastName);</span>
+<span class="fc" id="L45">    }</span>
+
+    // Update contact's phone number
+    public void updatePhone(String contactId, String phone) {
+<span class="fc" id="L49">        Contact contact = getContact(contactId);</span>
+<span class="fc" id="L50">        contact.setPhone(phone);</span>
+<span class="fc" id="L51">    }</span>
+
+    // Update contact's address
+    public void updateAddress(String contactId, String address) {
+<span class="fc" id="L55">        Contact contact = getContact(contactId);</span>
+<span class="fc" id="L56">        contact.setAddress(address);</span>
+<span class="fc" id="L57">    }</span>
+
+    // Helper method to get a contact by ID
+    Contact getContact(String contactId) {
+<span class="pc bpc" id="L61" title="2 of 4 branches missed.">        if (contactId == null || contactId.length() == 0) {</span>
+<span class="nc" id="L62">            throw new IllegalArgumentException(&quot;Contact ID cannot be null or empty.&quot;);</span>
+        }
+<span class="fc" id="L64">        Contact contact = contacts.get(contactId);</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (contact == null) {</span>
+<span class="fc" id="L66">            throw new IllegalArgumentException(&quot;Contact ID not found.&quot;);</span>
+        }
+<span class="fc" id="L68">        return contact;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

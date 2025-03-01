@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AppointmentService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MobileAppServices</a> &gt; <a href="index.source.html" class="el_package">com.grandstand.services</a> &gt; <span class="el_source">AppointmentService.java</span></div><h1>AppointmentService.java</h1><pre class="source lang-java linenums">package com.grandstand.services;
+
+import java.util.HashMap;
+import java.util.Map;
+
+<span class="fc" id="L6">public class AppointmentService {</span>
+
+<span class="fc" id="L8">    private final Map&lt;String, Appointment&gt; appointments = new HashMap&lt;&gt;();</span>
+
+    // Add a new appointment
+    public void addAppointment(Appointment appointment) {
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if (appointment == null) {</span>
+<span class="fc" id="L13">            throw new IllegalArgumentException(&quot;Appointment cannot be null.&quot;);</span>
+        }
+<span class="fc" id="L15">        String appointmentId = appointment.getAppointmentId();</span>
+<span class="pc bpc" id="L16" title="2 of 4 branches missed.">        if (appointmentId == null || appointmentId.isEmpty()) {</span>
+<span class="nc" id="L17">            throw new IllegalArgumentException(&quot;Appointment ID cannot be null or empty.&quot;);</span>
+        }
+
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (appointments.containsKey(appointmentId)) {</span>
+<span class="fc" id="L21">            throw new IllegalArgumentException(&quot;Appointment ID already exists.&quot;);</span>
+        }
+<span class="fc" id="L23">        appointments.put(appointmentId, appointment);</span>
+<span class="fc" id="L24">    }</span>
+
+    // Delete an appointment by appointmentId
+    public void deleteAppointment(String appointmentId) {
+<span class="fc" id="L28">        validateAppointmentId(appointmentId);</span>
+
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (appointments.remove(appointmentId) == null) {</span>
+<span class="fc" id="L31">            throw new IllegalArgumentException(&quot;Appointment ID not found.&quot;);</span>
+        }
+<span class="fc" id="L33">    }</span>
+
+    // Retrieve an appointment by appointmentId
+    public Appointment getAppointment(String appointmentId) {
+<span class="fc" id="L37">        validateAppointmentId(appointmentId);</span>
+<span class="fc" id="L38">        Appointment appointment = appointments.get(appointmentId);</span>
+
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (appointment == null) {</span>
+<span class="fc" id="L41">            throw new IllegalArgumentException(&quot;Appointment ID not found.&quot;);</span>
+        }
+<span class="fc" id="L43">        return appointment;</span>
+    }
+
+    // Validate appointment ID is not null or empty
+    private void validateAppointmentId(String appointmentId) {
+<span class="fc bfc" id="L48" title="All 4 branches covered.">        if (appointmentId == null || appointmentId.isEmpty()) {</span>
+<span class="fc" id="L49">            throw new IllegalArgumentException(&quot;Appointment ID cannot be null or empty.&quot;);</span>
+        }
+<span class="fc" id="L51">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

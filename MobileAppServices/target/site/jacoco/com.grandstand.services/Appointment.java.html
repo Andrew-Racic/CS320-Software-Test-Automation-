@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Appointment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MobileAppServices</a> &gt; <a href="index.source.html" class="el_package">com.grandstand.services</a> &gt; <span class="el_source">Appointment.java</span></div><h1>Appointment.java</h1><pre class="source lang-java linenums">package com.grandstand.services;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Objects;
+
+public class Appointment {
+    private String appointmentId;
+    private Date appointmentDate;
+    private String description;
+
+    private static final int ID_LENGTH = 10;
+    private static final int DESCRIPTION_LENGTH = 50;
+
+<span class="fc" id="L16">    public Appointment(String appointmentId, Date appointmentDate, String description) {</span>
+<span class="fc" id="L17">        validateAppointmentId(appointmentId);</span>
+<span class="fc" id="L18">        validateAppointmentDate(appointmentDate);</span>
+<span class="fc" id="L19">        validateDescription(description);</span>
+
+<span class="fc" id="L21">        this.appointmentId = appointmentId;</span>
+<span class="fc" id="L22">        this.appointmentDate = new Date(appointmentDate.getTime()); // Defensive copy</span>
+<span class="fc" id="L23">        this.description = description;</span>
+<span class="fc" id="L24">    }</span>
+
+    private void validateAppointmentId(String appointmentId) {
+<span class="fc bfc" id="L27" title="All 4 branches covered.">        if (appointmentId == null || appointmentId.length() &gt; ID_LENGTH) {</span>
+<span class="fc" id="L28">            throw new IllegalArgumentException(&quot;Appointment ID cannot be null or longer than &quot; + ID_LENGTH + &quot; characters.&quot;);</span>
+        }
+<span class="fc" id="L30">    }</span>
+
+    private void validateAppointmentDate(Date appointmentDate) {
+<span class="fc bfc" id="L33" title="All 4 branches covered.">        if (appointmentDate == null || appointmentDate.before(new Date())) {</span>
+<span class="fc" id="L34">            throw new IllegalArgumentException(&quot;Appointment date cannot be null or in the past.&quot;);</span>
+        }
+<span class="fc" id="L36">    }</span>
+
+    private void validateDescription(String description) {
+<span class="fc bfc" id="L39" title="All 4 branches covered.">        if (description == null || description.length() &gt; DESCRIPTION_LENGTH) {</span>
+<span class="fc" id="L40">            throw new IllegalArgumentException(&quot;Description cannot be null or longer than &quot; + DESCRIPTION_LENGTH + &quot; characters.&quot;);</span>
+        }
+<span class="fc" id="L42">    }</span>
+
+    public String getAppointmentId() {
+<span class="fc" id="L45">        return appointmentId;</span>
+    }
+
+    public Date getAppointmentDate() {
+<span class="fc" id="L49">        return new Date(appointmentDate.getTime()); // Defensive copy</span>
+    }
+
+    public void setAppointmentDate(Date appointmentDate) {
+<span class="fc" id="L53">        validateAppointmentDate(appointmentDate);</span>
+<span class="fc" id="L54">        this.appointmentDate = new Date(appointmentDate.getTime()); // Defensive copy</span>
+<span class="fc" id="L55">    }</span>
+
+    public String getDescription() {
+<span class="fc" id="L58">        return description;</span>
+    }
+
+    public void setDescription(String description) {
+<span class="fc" id="L62">        validateDescription(description);</span>
+<span class="fc" id="L63">        this.description = description;</span>
+<span class="fc" id="L64">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        if (this == o) return true;</span>
+<span class="pc bpc" id="L69" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+
+<span class="fc" id="L71">        Appointment that = (Appointment) o;</span>
+
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        return Objects.equals(appointmentId, that.appointmentId) &amp;&amp;</span>
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">               Objects.equals(appointmentDate, that.appointmentDate) &amp;&amp;</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">               Objects.equals(description, that.description);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L80">        return Objects.hash(appointmentId, appointmentDate, description);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
